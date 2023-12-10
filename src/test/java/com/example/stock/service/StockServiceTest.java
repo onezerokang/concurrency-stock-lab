@@ -4,7 +4,6 @@ import com.example.stock.domain.Stock;
 import com.example.stock.repository.StockRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,7 +17,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class StockServiceTest {
     @Autowired
-    private StockService stockService;
+//    private StockService stockService;
+    private PessimisticLockStockService stockService;
     
     @Autowired
     private StockRepository stockRepository;
